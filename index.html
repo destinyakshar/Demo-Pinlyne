@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+        .logo-container {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 10;
+        }
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+        .logo-container .slogan {
+            margin-top: -5px;
+            margin-left: 55px;
+            font-size: 0.8rem;
+            color: #044AB5;
+            font-style: italic;
+        }
+        header {
+            text-align: center;
+            background: linear-gradient(45deg, #4caf50, #81c784);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 250px;
+            object-fit: contain;
+        }
+        .product-content {
+            padding: 10px;
+            text-align: center;
+        }
+        .product-content h2 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #4caf50;
+            color: white;
+            margin-top: 20px;
+        }
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-section .vision-mission,
+        .contact-section .about-company,
+        .contact-section .contact-details {
+            flex: 1;
+            text-align: center;
+        }
+        .contact-section h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #4caf50;
+        }
+        .contact-section p {
+            margin: 5px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        /* Add justified alignment to Vision & Mission content */
+        .vision-mission p {
+            text-align: justify;
+        }
+        .contact-section .contact-logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo-container {
+                position: relative;
+                top: 0;
+                left: 0;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="images/Pinlyne_Logo-without background.png" alt="Firm Logo">
+        <div class="slogan">Building Bonds Daily</div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Our Product Catalogue</h1>
+        <p>Explore our exclusive collection</p>
+    </header>
+
+    <!-- Product Catalogue -->
+    <div class="container">
+        <div class="product">
+            <a href="coffeemug.html">
+                <img src="images/CoffeeMug.jpeg" alt="Product 1">
+                <div class="product-content">
+                    <h2>Coffee Mug/Tumbler</h2>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="DogHairTrimmer.html">
+                <img src="images/DogHairTrimmer.jpeg" alt="Product 2">
+                <div class="product-content">
+                    <h2>Dog Hair Trimmer</h2>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="StickyWallStorageRack.html">
+                <img src="images/StickyWallStorageRack1.jpg" alt="Product 3">
+                <div class="product-content">
+                    <h2>Sticky Wall Storage Rack</h2>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="USBGasLighterWithCable.html">
+                <img src="images/USBGasLighterWithCable.jpg" alt="Product 4">
+                <div class="product-content">
+                    <h2>USB Gas Lighter with Cable</h2>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="ElectricCoffeeGrinder.html">
+                <img src="images/ElectricCoffeeGrinder.jpg" alt="Product 5">
+                <div class="product-content">
+                    <h2>Electric Coffee Grinder</h2>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="PearShapeNightLight.html">
+                <img src="images/PearShapeNightLight.jpg" alt="Product 6">
+                <div class="product-content">
+                    <h2>Pear Shape Night Light</h2>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="NICEWaterBottle.html">
+                <img src="images/NICEWaterBottle.jpg" alt="Product 7">
+                <div class="product-content">
+                    <h2>Fruit Juicer Bottle USB</h2>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="VaccumFlaskBottleWithCup.html">
+                <img src="images/VaccumFlaskBottleWithCup.jpg" alt="Product 8">
+                <div class="product-content">
+                    <h2>Vaccum FlaskBottle With Cup</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Vision, About Company, and Contact Section -->
+    <div class="contact-section">
+        <div class="vision-mission">
+            <h2>Vision & Mission</h2>
+            <p>
+                At PINLYNE, we aim to redefine wholesale shopping by combining quality and affordability to deliver exceptional products at competitive prices. With a customer-first approach, innovative strategies, and efficient processes, we strive to foster trust, enrich lives, and build lasting relationships grounded in mutual success and satisfaction.
+            </p>
+        </div>
+        <div class="about-company">
+            <h2>About Company</h2>
+            <p><strong>Nature of Business:</strong> Wholesaler/Distributor</p>
+            <p><strong>Total Number of Employees:</strong> Upto 10 People</p>
+            <p><strong>GST Registration Date:</strong> 11-12-2024</p>
+            <p><strong>Legal Status of Firm:</strong> Proprietorship</p>
+            <p><strong>GST No.:</strong> 24ASUPP3570E1ZG</p>
+        </div>
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <div class="contact-logo">
+                <img src="images/Pinlyne_Logo-without background.png" alt="Company Logo">
+            </div>
+            <p><strong>Address:</strong> Add address here</p>
+            <p><strong>Email:</strong> <a href="mailto:addmail@example.com">pinlyne088@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+910000000000">+91 9998815073</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/pinlyne1/">pinlyne1</a></p>
+            <p><strong>Telegram:</strong> <a href="https://t.me/s/pinlyne">pinlyne</a></p> 
+        </div>
+    </div>
+	
+	<!-- Ratings & Reviews Section -->
+<div class="ratings-reviews-section">
+    <h2>Ratings & Reviews</h2>
+    <div class="rating-summary">
+        <div class="average-rating">
+            <span class="rating-value">4.6</span><span>/5</span>
+            <div class="stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+            <p>Reviewed by 253 Users</p>
+        </div>
+        <div class="detailed-ratings">
+            <div class="rating-bar">
+                <span>5★</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 84%;"></div>
+                </div>
+                <span>84%</span>
+            </div>
+            <div class="rating-bar">
+                <span>4★</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 6%;"></div>
+                </div>
+                <span>6%</span>
+            </div>
+            <div class="rating-bar">
+                <span>3★</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 2%;"></div>
+                </div>
+                <span>2%</span>
+            </div>
+            <div class="rating-bar">
+                <span>2★</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 5%;"></div>
+                </div>
+                <span>5%</span>
+            </div>
+            <div class="rating-bar">
+                <span>1★</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 3%;"></div>
+                </div>
+                <span>3%</span>
+            </div>
+        </div>
+        <div class="user-satisfaction">
+            <h3>👍 User Satisfaction</h3>
+            <div class="satisfaction-metric">
+                <span>Response</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 92%;"></div>
+                </div>
+                <span>92%</span>
+            </div>
+            <div class="satisfaction-metric">
+                <span>Quality</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 88%;"></div>
+                </div>
+                <span>88%</span>
+            </div>
+            <div class="satisfaction-metric">
+                <span>Delivery</span>
+                <div class="bar">
+                    <div class="filled-bar" style="width: 94%;"></div>
+                </div>
+                <span>94%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add the following CSS -->
+<style>
+    .ratings-reviews-section {
+        max-width: 1200px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        font-family: 'Arial', sans-serif;
+    }
+    .ratings-reviews-section h2 {
+        text-align: center;
+        color: #4caf50;
+        margin-bottom: 20px;
+    }
+    .rating-summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .average-rating {
+        text-align: center;
+        flex: 1;
+    }
+    .average-rating .rating-value {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+    .average-rating .stars {
+        font-size: 1.5rem;
+        color: gold;
+    }
+    .detailed-ratings, .user-satisfaction {
+        flex: 2;
+    }
+    .rating-bar, .satisfaction-metric {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    .rating-bar span, .satisfaction-metric span {
+        width: 50px;
+        font-size: 1rem;
+        text-align: right;
+        margin-right: 10px;
+    }
+    .bar {
+        flex: 1;
+        background: #e0e0e0;
+        height: 10px;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+    .bar .filled-bar {
+        height: 100%;
+        background: #4caf50;
+    }
+    .rating-bar span:last-child, .satisfaction-metric span:last-child {
+        width: 50px;
+        text-align: left;
+        margin-left: 10px;
+    }
+    .user-satisfaction h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: #4caf50;
+    }
+</style>
+
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PINLYNE. All Rights Reserved.
+    </footer>
+</body>
+</html>
